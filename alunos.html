@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="alunos.css">
+</head>
+
+<body>
+    <label for="ra" style="color: white;">Digite o seu R.A:</label>
+    <input type="number" name="ra" id="ra">
+    <button type="button" onclick="procurarRA()">Procurar por RA</button>
+    <br>
+    <label for="nome" style="color: white;">Digite o seu Nome:</label>
+    <input type="text" name="nome" id="nome">
+    <button type="button" onclick="procurarNome()">Procurar por Nome</button>
+    <br>
+    <label for="letra" style="color: white;">Letra</label>
+    <input type="text" name="letra" id="letra" size="1">
+    <button type="button" onclick="procurarLetra()">Procurar por Letra</button>
+    <br>
+    <br>
+    <label for="nota1" style="color: white;">Nota do 1º Bimestre</label>
+    <input type="number" name="nota1" id="nota1">
+    <br>
+    <br>
+    <label for="nota2" style="color: white;">Nota do 2º Bimestre</label>
+    <input type="number" name="nota2" id="nota2">
+    <br>
+    <br>
+    <label for="nota3" style="color: white;">Nota do 3º Bimestre</label>
+    <input type="number" name="nota3" id="nota3">
+    <br>
+    <br>
+    <label for="nota4" style="color: white;">Nota do 4º Bimestre</label>
+    <input type="number" name="nota4" id="nota4">
+    <br>
+    <br>
+    <button type="button" onclick="inserir()">Inserir Alunos</button>
+    <button type="button" onclick="listar()">Mostrar Alunos Inseridos</button>
+    <button type="button" onclick="mediaTurma()">Média da Turma</button>
+    <button type="button" onclick="maiorMedia()">Maior Média</button>
+    <button type="button" onclick="relatorioFinal()"> Relatório Final</button>
+    <br>
+    <div id="outputListaSaida" style="background-color: rgb(255, 255, 255);">...</div>
+
+    <script src="alunoClass.js"></script>
+    <script src="alunosControle.js"></script>
+</body>
+
+</html>
