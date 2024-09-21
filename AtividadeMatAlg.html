@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculadora de Conta de Água/Esgoto em função do consumo em m³</h2>
+    <br>
+    <label for="consumo">Consumo em m³:</label>
+    <input type="number" name="consumo" id="consumo">
+    <br>
+    <button type="button" onclick="calcular()">Cacular Valor da Conta</button>
+    <br>
+    <div id="resultado" style="background-color: aqua;">...</div>
+
+    <script>
+
+    function calcular(){
+        let consumo = parseFloat(document.getElementById("consumo").value);
+        let valorFinal = 0;
+
+        if(consumo >= 0 && consumo <=5){
+            valorFinal = 90.76
+        }
+        else if(consumo > 5 && consumo <=10){
+            valorFinal = 90.76 + (consumo - 5) * 2.81;
+        }
+        else if(consumo > 10 && consumo <= 15){
+            valorFinal = 90.76 + 5 * 2.81 + (consumo - 10) * 15.64;
+        }
+        else if(consumo > 15 && consumo <= 20){
+            valorFinal = 90.76 + 5 * 2.81 + 5 * 15.64 + (consumo - 15) * 15.72;
+        }
+        else if(consumo > 20 && consumo <= 30){
+            valorFinal = 90.76 + 5 * 2.81 + 5 * 15.64 + 5 * 15.72 + (consumo - 20) * 15.85;
+        } 
+        else if(consumo > 30){
+            valorFinal = 90.76 + 5 * 2.81 + 5 * 15.64 + 5 * 15.72 + 10 * 15.85 + (consumo - 30) * 26.82;
+        }
+
+        document.getElementById('resultado').innerText = "Valor total a pagar: R$" + valorFinal.toFixed(2);
+    }
+    </script>
+    
+
+</body>
+</html>
